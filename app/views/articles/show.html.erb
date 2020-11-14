@@ -1,0 +1,34 @@
+<h1>NUEVO ARTICULO (puedes editar, borrar)</h1>
+
+
+<table width="50%" border="1" bgcolor="">
+<tr>
+  <td><strong>ID</strong></td>
+  <td><strong>NOMBRE</strong></td>
+   <td><strong>STATUS</strong></td>
+</tr>
+
+<tr>
+<td><%= @article.id %></td>
+
+
+<td><%= @article.title  %></td>
+
+<td><%= @article.status  %></td>
+ </tr>
+</table>
+
+
+
+<%= link_to "Eliminar", @article,method: :delete,data: { confirm: "Deseas Eliminar registro?"} %>
+<h6>preciona back y veras que se elimino ar articulo :)</h6>
+
+<p>
+<%= link_to "Crear Articulo", { :action => "new" }, :method => :get %>
+</p>
+<p>
+<%= link_to "Editar", {:action => "edit" }, :method => :get %>
+</p>
+<%= link_to 'Back', articles_path %>
+
+

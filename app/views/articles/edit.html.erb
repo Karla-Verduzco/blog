@@ -1,0 +1,24 @@
+<h1>PAGINA PARA EDITAR </h1>
+
+<%= form_with(model: @article, local: true) do |form| %>
+
+<p>
+<div>
+	
+	<%= form.label :title %>
+	<%= form.text_field :title %>
+</div>
+</p>
+<p>
+<div>
+     <%= form.label :status %>
+     <%= form.text_field :status %>
+</div>
+</p>
+
+<div>
+  
+   <%= button_to "Listo Editado", { :action => "new" }, :method => :get %>
+</div>
+
+<% end %>

@@ -1,0 +1,32 @@
+<h1>articles_controller >> index.html.erb</h1>
+
+<h1>TODOS LOS DATOS (pagina principal del localhost)</h1>
+
+<div>
+ <%= link_to 'Regresar', articles_path %>
+   <%= button_to "Agregar Articulo", { :action => "new" }, :method => :get %>
+</div>
+
+
+
+
+<hr>
+<% @articles.each do |registro| %>
+<p>
+	<STRONG> ID</STRONG>
+  <%= registro.id %>
+</p>
+<p>
+	<strong>NOMB/TITULO</strong>
+	
+  <%= registro.title %>
+</p>
+ <strong>STATUS</strong>
+ 
+  <%= registro.status %>
+</p>
+
+
+
+<hr>
+<% end %>
